@@ -26,18 +26,21 @@ class Persona:
 
     # Método 5: Saludar
     def saludar(self, otra_persona):
-        print(f"Hola {otra_persona}, soy {self.nombre}. ¡Mucho gusto!")
+        print(f"Hola {otra_persona.nombre}, soy {self.nombre}. ¡Mucho gusto!")
+
+    # Método adicional: Saludar a otra persona
+    def saludar_a(self, nombre_otra_persona):
+        return f"Hola, {self.nombre}, te manda a saludar {nombre_otra_persona}."
 
 
-# Crear una instancia de la clase Persona
+# Crear instancias de la clase Persona
 persona1 = Persona("Juan", 19, "Estudiante")
 persona2 = Persona("Victor", 10, "Ingeniero")
+
 # Llamada a los métodos de la instancia
-persona1.presentarse()  # Hola, me llamo Ana y tengo 30 años.
-persona1.describir_ocupacion()  # Ana es Ingeniera.
-persona1.cambiar_ocupacion("Doctora")  # Ana ahora trabaja como Doctora.
-persona1.cumplir_anios()  # Ana ha cumplido 31 años.
-persona1.saludar("Carlos")  # Hola Carlos, soy Ana. ¡Mucho gusto!
-def saludarA(self,nombreOtraPersona):
-    return f"hola,{self.nombre},te manda a saludar {nombreOtraPersona}"
-print(persona1.saludarA (persona2.nombre))
+persona1.presentarse()  # "Hola, me llamo Juan y tengo 19 años."
+persona1.describir_ocupacion()  # "Juan es Estudiante."
+persona1.cambiar_ocupacion("Doctor")  # "Juan ahora trabaja como Doctor."
+persona1.cumplir_anios()  # "Juan ha cumplido 20 años."
+persona1.saludar(persona2)  # "Hola Victor, soy Juan. ¡Mucho gusto!"
+print(persona1.saludar_a(persona2.nombre))  # "Hola, Juan, te manda a saludar Victor."
